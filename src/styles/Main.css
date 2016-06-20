@@ -1,0 +1,13 @@
+/* Base Application Styles */
+body {
+  color: #fff;
+  background: #f4f4f4;
+}
+
+.index .aui-content{
+  background: #fff;
+}
+.index .aui-content a, .index .aui-content a:active, .index .aui-content a:hover, .index .aui-content a:visited{
+  text-decoration: initial;
+  color:#333;
+}
