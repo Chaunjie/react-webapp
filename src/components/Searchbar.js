@@ -7,6 +7,10 @@ require('styles/SearchBar.css');
 import React from 'react';
 
 class Searchbar extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
   render() {
     return (
       <div className="aui-searchbar-wrap demo" id="search" style={{}}>

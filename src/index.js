@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute} from 'react-router';
 import Main from './components/Main';
 import SearchBar from './components/Searchbar';
+import Tabs from './components/Tabs';
 
 class TestApp extends React.Component {
   render() {
@@ -22,6 +23,7 @@ ReactDOM.render((
     <Route path="/" component={TestApp}>
       <IndexRoute component={Main}/>
       <Route path="/SearchBar" component={SearchBar}/>
+      <Route path="/Tabs/:id" component={Tabs}/>
     </Route>
   </Router>
 ), document.getElementById('app'));

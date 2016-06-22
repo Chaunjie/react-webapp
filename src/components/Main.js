@@ -5,6 +5,10 @@ import React from 'react';
 import {Link} from 'react-router';
 
 class AppComponent extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
   render() {
     return (
       <div className="index">
@@ -25,10 +29,10 @@ class AppComponent extends React.Component {
         <div className="aui-content">
           <ul className="aui-list-view">
             <li className="aui-list-view-cell"  onclick="openWin('pull_refresh')">
-              <a href="#SearchBar" className="aui-arrow-right">下拉刷新组件（一）<span className="aui-badge aui-badge-danger">新增</span></a>
+              <a href="#SearchBar" className="aui-arrow-right">搜索条<span className="aui-badge aui-badge-danger">新增</span></a>
             </li>
             <li className="aui-list-view-cell"  onclick="openWin('pull_refresh_2')">
-             <Link to="/SearchBar" className="aui-arrow-right">下拉刷新组件（二）<span className="aui-badge aui-badge-danger">新增</span></Link>
+             <Link to="/Tabs/12" className="aui-arrow-right">Tabs<span className="aui-badge aui-badge-danger">新增</span></Link>
             </li>
             <li className="aui-list-view-cell"  onclick="openWin('slide')">
               <a className="aui-arrow-right">轮播组件<span className="aui-badge aui-badge-danger">新增</span></a>
