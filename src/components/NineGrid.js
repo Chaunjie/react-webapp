@@ -5,7 +5,6 @@ require('normalize.css/normalize.css');
 require('styles/Ninegrid.css');
 
 import React from 'react';
-import Tloader from 'react-touch-loader';
 
 
 export default class NineGrid extends React.Component {
@@ -18,25 +17,9 @@ export default class NineGrid extends React.Component {
 
   }
 
-  hasMore={true}
-
-  onRefresh (resolve, reject) {
-    setTimeout(resolve, 3000);
-  }
-
-  handleLoadMore(resolve){
-    setTimeout(resolve, 3000);
-  }
-
   render() {
     return (
-      <div className="nine-grid aui-load-container">
-        <Tloader
-          initializing={0}
-          onRefresh={this.onRefresh.bind(this)}
-          hasMore={this.hasMore}
-          onLoadMore={this.handleLoadMore}
-          className="refresh-container">
+      <div className="nine-grid aui-load-container refresh-container">
           <div className="aui-content">
             <ul className="aui-grid-nine">
               <li className="aui-col-xs-4 aui-text-center">
@@ -69,7 +52,6 @@ export default class NineGrid extends React.Component {
               </li>
             </ul>
           </div>
-        </Tloader>
       </div>
     );
   }

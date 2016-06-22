@@ -51,7 +51,7 @@ export default class RefreshList extends React.Component {
       this.setState({
         listLen: 9,
         hasMore: 1,
-        initializing: 2, // initialized
+        initializing: 2 // initialized
       });
     }.bind(this), 2e3);
   }
@@ -61,8 +61,7 @@ export default class RefreshList extends React.Component {
   }
 
   render() {
-    var { listLen, hasMore, initializing, refreshedAt, canRefreshResolve } = this.state;
-    var { refresh, loadMore, toggleCanReresh } = this;
+    var { listLen, hasMore, initializing} = this.state;
     var list = [];
 
     if(listLen) {
