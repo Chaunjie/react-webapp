@@ -12,11 +12,10 @@ let Component = Home;
 export default class Tab extends React.Component {
   constructor(props){
     super(props);
-    console.log(this.props.params.id);
 
     this.state = {
       component:Home,
-      title:'栏目1',
+      title:'首页',
       activeTab:0
     };
 
@@ -29,29 +28,29 @@ export default class Tab extends React.Component {
   render() {
     return (
       <div className="tabs">
-        <header className="aui-bar aui-bar-nav aui-bar-warning" id="aui-header">
-          <div className="aui-title" id="header-title">{this.state.title}</div>
+        <header className="aui-bar aui-bar-nav aui-bar-warning">
+          <div className="aui-title">{this.state.title}</div>
         </header>
         <div className="center">
-          <Component style=""/>
+          <Component className="center"/>
         </div>
-        <footer className="aui-nav" id="aui-footer">
+        <footer className="aui-nav">
           <ul className="aui-bar-tab">
-            <li className={this.state.activeTab == 0 ? "active-warning" : ""} id="tabbar1" onClick={this.translateToPage.bind(this, Home, '栏目1', 0)}>
+            <li className={this.state.activeTab == 0 ? 'active-warning' : ''} onClick={this.translateToPage.bind(this, Home, '首页', 0)}>
               <span className="aui-iconfont aui-icon-home"></span>
-              <p>栏目1</p>
+              <p>首页</p>
             </li>
-            <li id="tabbar2" className={this.state.activeTab == 1 ? "active-warning" : ""} onClick={this.translateToPage.bind(this, Circle, '栏目2', 1)}>
+            <li id="tabbar2" className={this.state.activeTab == 1 ? 'active-warning' : ''} onClick={this.translateToPage.bind(this, Circle, '消息', 1)}>
               <span className="aui-iconfont aui-icon-mark"></span>
-              <p>栏目2</p>
+              <p>消息</p>
             </li>
-            <li id="tabbar3" className={this.state.activeTab == 2 ? "active-warning" : ""} onClick={this.translateToPage.bind(this, Home, '栏目3', 2)}>
+            <li id="tabbar3" className={this.state.activeTab == 2 ? 'active-warning' : ''} onClick={this.translateToPage.bind(this, Home, '关注', 2)}>
               <span className="aui-iconfont aui-icon-like"></span>
-              <p>栏目3</p>
+              <p>关注</p>
             </li>
-            <li id="tabbar4" className={this.state.activeTab == 3 ? "active-warning" : ""} onClick={this.translateToPage.bind(this, Circle, '栏目4', 3)}>
-              <span className="aui-iconfont aui-icon-my"></span>
-              <p>栏目4</p>
+            <li id="tabbar4" className={this.state.activeTab == 3 ? 'active-warning' : ''} onClick={this.translateToPage.bind(this, Circle, '个人中心', 3)}>
+              <span className="aui-iconfont aui-icon-people"></span>
+              <p>个人中心</p>
             </li>
           </ul>
         </footer>

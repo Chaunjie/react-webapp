@@ -1,0 +1,27 @@
+.refresh-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.refresh-container a{
+  text-decoration: initial;
+  color:#333;
+}
+
+.refresh-container > .aui-content, .refresh-container > .aui-content > .aui-list-view{
+  margin-bottom: 0;
+}
+
+.refresh-container .main{
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}

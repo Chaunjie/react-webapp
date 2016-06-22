@@ -6,6 +6,8 @@ import { Router, Route, IndexRoute} from 'react-router';
 import Main from './components/Main';
 import SearchBar from './components/Searchbar';
 import Tabs from './components/Tabs';
+import NineGrid from './components/NineGrid';
+import Refresh from './components/RefreshList';
 
 class TestApp extends React.Component {
   render() {
@@ -24,6 +26,8 @@ ReactDOM.render((
       <IndexRoute component={Main}/>
       <Route path="/SearchBar" component={SearchBar}/>
       <Route path="/Tabs/:id" component={Tabs}/>
+      <Route path="/nineGrid/:id" component={NineGrid}/>
+      <Route path="/refresh" component={Refresh}/>
     </Route>
   </Router>
 ), document.getElementById('app'));

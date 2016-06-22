@@ -1,0 +1,21 @@
+.nine-grid .aui-grid-nine li:after{
+  border-right: 1px solid #c8c7cc;
+  border-left:none;
+}
+
+.nine-grid .aui-grid-nine:after{
+  border-right:none;
+  border-right: 1px solid #c8c7cc;
+}
+
+.nine-grid{
+  height:100%;
+  overflow-y: scroll;
+}
+.nine-grid .refresh-container{
+  height:100%;
+  background:#fff
+}
+#app > div{
+  min-height:100%;
+}

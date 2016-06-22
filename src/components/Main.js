@@ -35,10 +35,10 @@ class AppComponent extends React.Component {
              <Link to="/Tabs/12" className="aui-arrow-right">Tabs<span className="aui-badge aui-badge-danger">新增</span></Link>
             </li>
             <li className="aui-list-view-cell"  onclick="openWin('slide')">
-              <a className="aui-arrow-right">轮播组件<span className="aui-badge aui-badge-danger">新增</span></a>
+              <Link to="/nineGrid/13" className="aui-arrow-right">九宫格<span className="aui-badge aui-badge-danger">新增</span></Link>
             </li>
             <li className="aui-list-view-cell"  onclick="openWin('list_swipe')">
-              <a className="aui-arrow-right">列表右滑显示菜单<span className="aui-badge aui-badge-danger">新增</span></a>
+              <Link to="/refresh" className="aui-arrow-right">刷新加载<span className="aui-badge aui-badge-danger">新增</span></Link>
             </li>
             <li className="aui-list-view-cell"  onclick="openWin('accordion')">
               <a className="aui-arrow-right">手风琴折叠面板<span className="aui-badge aui-badge-danger">新增</span></a>
