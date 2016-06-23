@@ -4,9 +4,9 @@
   left: 0;
   right: 0;
   height: 100%;
-  overflow: hidden;
+  overflow: hidden;/*关键*/
   background-color: #fff;
-  display: flex;
+  display: flex;/*关键*/
   flex-direction: column;
 }
 

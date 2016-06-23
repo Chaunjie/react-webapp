@@ -1,0 +1,19 @@
+.overflow{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0,0,0,.6);
+  display: flex;/*关键*/
+  flex-direction: column;
+  z-index:1;
+}
+.overflow .modal{
+  width: 80%;
+  height: 200px;
+  background:#fff;
+  margin-left:10%;
+  margin-top:100px;
+  border-radius: 5px;
+}
