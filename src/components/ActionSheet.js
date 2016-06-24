@@ -7,13 +7,13 @@ require('styles/overflow.css');
 
 import React from 'react';
 
-export default class Alert extends React.Component {
+export default class ActionSheet extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       btns: '',
-      animateClassList: 'alert-box animated bounceIn',
+      animateClassList: 'actionSheet animated slideInUp',
       animateClassOverflow: 'overflow animated fadeIn'
     };
   }
@@ -30,9 +30,10 @@ export default class Alert extends React.Component {
     return (
       <div className={this.state.animateClassOverflow}>
         <div className={this.state.animateClassList}>
-          <div className="alert-box-header">{this.props.title}</div>
-          <div className="alert-box-body">{this.props.content}</div>
-          <div className="alert-box-footer">{this.state.btns}</div>
+          <div className="actionSheet-menus">
+            {this.state.btns}
+          </div>
+          <div className="actionSheet-cencel actionSheet-btn" style={{color:this.props.cancelBtn.color}} onClick={this.closeModal.bind(this, 'cancel')}>{this.props.cancelBtn.text}</div>
         </div>
       </div>
     );
@@ -41,24 +42,25 @@ export default class Alert extends React.Component {
 
   closeModal(index) {
     this.setState({
-      animateClassList: 'alert-box animated bounceOut'
+      animateClassList: 'actionSheet animated slideOutDown'
     });
 
     const _this = this;
-    setTimeout(function(){
+    setTimeout(function () {
       _this.setState({
         animateClassOverflow: 'overflow animated fadeOut'
       });
-    },300);
+    }, 300);
 
     this.props.close(this.props._this, index);
   }
 
-  mapBtns(that){
+  mapBtns(that) {
     const _this = that;
-    var btns = this.props.btns.map(function(b, index){
-      return(
-        <div className="aui-box-btn" onClick={_this.closeModal.bind(_this, index)} style={{color:b.color}}>{b.text}</div>
+    var btns = this.props.btns.map(function (b, index) {
+      return (
+        <div className="actionSheet-btn sure-btn" onClick={_this.closeModal.bind(_this, index)}
+             style={{color:b.color}}>{b.text}</div>
       )
     });
 

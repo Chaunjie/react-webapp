@@ -6,3 +6,16 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
+.tabs .aui-nav{
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.tabs{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}

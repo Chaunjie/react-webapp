@@ -1,0 +1,29 @@
+.example{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.example-enter {
+  z-index: 1024;
+  opacity: 0.01;
+  transform: translate3d(100%, 0, 0);
+  transition: all .2s ease;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.example-leave {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: all .2s ease;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transform: translate3d(-100%, 0, 0);
+}

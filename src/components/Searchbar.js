@@ -6,7 +6,7 @@ require('styles/SearchBar.css');
 require('styles/Iconfont.css');
 
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 
 export default class Searchbar extends React.Component {
   constructor(props) {
