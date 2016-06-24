@@ -26,4 +26,7 @@ npm run clean
 # Just copy the static assets
 npm run copy
 ```
+##node version
+```
+v4.2.6
 ```

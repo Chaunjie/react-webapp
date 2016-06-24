@@ -41,7 +41,7 @@ class AppComponent extends React.Component {
               <Link to="/refresh" className="aui-arrow-right">刷新加载<span className="aui-badge aui-badge-danger">新增</span></Link>
             </li>
             <li className="aui-list-view-cell"  onclick="openWin('button')">
-              <Link to="/button" className="aui-arrow-right">按钮</Link>
+              <Link to="/button" className="aui-arrow-right">按钮(附带Modal,Alert,ActionSheet组件)</Link>
             </li>
             <li className="aui-list-view-cell"  onclick="openWin('accordion')">
               <a className="aui-arrow-right">手风琴折叠面板<span className="aui-badge aui-badge-danger">新增</span></a>
